@@ -15,4 +15,67 @@
 
   /* Main Color */
   --primary-color: #014d4e;
+
+  /* Secondary Color */
+  --secondary-color: #ff9408;
+
+  /* Secondary Color Modified*/
+  --secondary-color-m: #ff94088e;
+
+  /* Tertiary color */
+  --tertiary-color: #017374;
+
+  /* Tertiary color modified */
+  --tertiary-color-m: #01737498;
+}
+
+body {
+  font-family: 'Baloo Tamma 2', cursive;
+  line-height: 1.8;
+
+  display: flex;
+}
+
+/* ********** Main styling ********** */
+
+/* *** Side Nav **** */
+
+aside#side-nav {
+  position: sticky;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+div.side-nav__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--primary-color);
+}
+
+div.side-nav__content--logo img {
+  width: calc(3vw + 3vh);
+  object-fit: cover;
+}
+
+ul.side-nav__content--social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ul.side-nav__content--social a i {
+  font-size: calc(1rem + 0.66667vw);
+  color: white;
+  padding-bottom: calc(2rem + 0.66667vw);
+  transition: color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+ul.side-nav__content--social a i:hover,
+ul.side-nav__content--social a i:active {
+  color: var(--secondary-color);
 }
