@@ -36,6 +36,17 @@ body {
   display: flex;
 }
 
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
 /* ********** Main styling ********** */
 
 /* *** Side Nav **** */
@@ -72,10 +83,78 @@ ul.side-nav__content--social a i {
   font-size: calc(1rem + 0.66667vw);
   color: white;
   padding-bottom: calc(2rem + 0.66667vw);
-  transition: color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: color 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 ul.side-nav__content--social a i:hover,
 ul.side-nav__content--social a i:active {
   color: var(--secondary-color);
+}
+
+/* ********************** Main Content ****************** */
+
+main {
+  flex: 1;
+}
+
+/* Main Nav header */
+header#header {
+  background-color: var(--secondary-color);
+  height: calc(3vh + 3vw);
+  z-index: 2;
+}
+
+nav.header__main-nav {
+  height: 100%;
+}
+
+ul.header__main-nav--links {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul.header__main-nav--links li {
+  padding-right: 3vw;
+}
+
+ul.header__main-nav--links li a {
+  position: relative;
+  padding: 0.2rem 0.6rem;
+  font-size: calc(1rem + 0.66667vw);
+}
+
+ul.header__main-nav--links li a:link::before,
+ul.header__main-nav--links li a:active::before,
+ul.header__main-nav--links li a:link::after,
+ul.header__main-nav--links li a:visited::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+  transform: scaleX(0);
+
+  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+ul.header__main-nav--links li a:link::before,
+ul.header__main-nav--links li a:active::before {
+  top: 0;
+  transform-origin: left;
+}
+
+ul.header__main-nav--links li a:link::after,
+ul.header__main-nav--links li a:visited::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+ul.header__main-nav--links li a:hover::before,
+ul.header__main-nav--links li a:active::before,
+ul.header__main-nav--links li a:hover::after,
+ul.header__main-nav--links li a:visited::after {
+  transform: scaleX(1);
 }
