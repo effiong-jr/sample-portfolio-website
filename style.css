@@ -242,6 +242,14 @@ div.showcase__content {
   transform-origin: left;
 }
 
+/* When max screen width is 900 and below */
+@media screen and (max-width: 900px) {
+  section#showcase {
+    background-position: 100%;
+    align-items: flex-end;
+  }
+}
+
 /* When max screen width is 610 and below */
 @media screen and (max-width: 610px) {
   header#header {
@@ -340,5 +348,9 @@ div.showcase__content {
 
   ul.header__main-nav--links li.fade {
     opacity: 1;
+  }
+
+  section#showcase {
+    background-position: 80%;
   }
 }
