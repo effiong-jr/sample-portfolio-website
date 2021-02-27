@@ -661,9 +661,9 @@ section#testimonials {
   transform-origin: center;
 }
 
-.testimonials__card:hover .testimonials__card--img,
-.testimonials__card:active .testimonials__card--img {
-  transform: scale(0.89);
+.testimonials__card:hover .testimonials__card--img img,
+.testimonials__card:active .testimonials__card--img img {
+  transform: scale(0.98);
   filter: grayscale(50%);
 }
 
@@ -799,13 +799,15 @@ section#testimonials {
 
   .services--title,
   .skills__coding--title,
-  .skills__design--title {
+  .skills__design--title,
+  .testimonials__card--content__title {
     font-size: calc(1.2rem + 2vw);
   }
 
   .services--para,
   .skills__design h4,
-  .skills__coding h4 {
+  .skills__coding h4,
+  .testimonials__card--content__para {
     font-size: calc(0.8rem + 1vw);
   }
 }
